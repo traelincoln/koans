@@ -36,8 +36,8 @@ class AboutOpenClasses < Neo::Koan
   end
 
   def test_even_existing_built_in_classes_can_be_reopened
-    assert_equal 42, 1.answer_to_life_universe_and_everything?
-    assert_equal 42, 42.answer_to_life_universe_and_everything?
+    assert_equal false, 1.answer_to_life_universe_and_everything?
+    assert_equal true, 42.answer_to_life_universe_and_everything?
   end
 
   # NOTE: To understand why we need the :: before Integer, you need to
